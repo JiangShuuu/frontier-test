@@ -90,29 +90,18 @@ export default {
     return {
       currentPage: this.initialCurrentPage,
       groupPage: this.countpage,
-      // countPage: this.totalPage,
     };
   },
   watch: {
     initialCurrentPage: function () {
       this.currentPage = this.initialCurrentPage;
-      console.log(this.currentPage);
-      // this.calculatePage();
     },
     countpage: function () {
       this.groupPage = this.countpage;
     },
   },
-  mounted() {
-    // this.calculatePage();
-  },
+
   methods: {
-    // calculatePage(page = 5) {
-    //   const next = this.countPage[page];
-    //   const prev = this.countPage[page - 2];
-    //   console.log(next);
-    //   console.log(prev);
-    // },
     changePage(page) {
       this.currentPage = page;
       this.$emit("change-page", {
